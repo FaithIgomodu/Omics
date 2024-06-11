@@ -106,6 +106,25 @@ expr_data
 
 ## Basics of Violin Plot
 
+A violin Plot is a visual distribution of data points using a density
+curve. The size of the curve is the density probability distribution of
+the data points, so the wider the violin plot, the more likely the
+dataset is concentrated around these values. Meaning, a data from the
+dataset is more likely to be within the range define by the area than
+anywhere else.And the thinner the violin plot, the less likely a data
+from the dataset is to be found in that area. By showing the variability
+in the distribution of the dataset, violin plots make exploring a
+dataset easy. Violin plots are used to answer questions such as:
+
+-   Is the dataset clustered around mean or median?
+
+-   compare the mean and median of different groups.
+
+Additionally, from plot below can see expression values of PTEN for all
+three cells subtypes is mostly around -1 and 3. For GATA3 , OV and LUSC
+cells have similar distribution compared to BRCA. And XBP1, OV and LUSC
+have similar distribution compared to BRCA.
+
 ``` r
 ggviolin(expr_data, x = "dataset",
           y = c("GATA3", "PTEN", "XBP1"),
@@ -116,3 +135,7 @@ ggviolin(expr_data, x = "dataset",
 ```
 
 ![](viz_02_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+
+References Facilitating exploratory data visualization: application to
+TCGA genomic Data - Articles - STHDA. (n.d.).
+<http://www.sthda.com/english/articles/24-ggpubr-publication-ready-plots/77-facilitating-exploratory-data-visualization-application-to-tcga-genomic-data/>
